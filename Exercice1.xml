@@ -1,0 +1,95 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<Exo1>
+
+    <!-- ● Réalisez un document XML représentant une liste de livres.
+● Chaque livre a un titre, un auteur (juste le nom/prénom), un genre et une date
+de publication.
+● Extra : Si le livre est le 2ième d’une série, on doit pouvoir retrouver le premier.  -->
+
+    <listeLivres>
+        <livre>
+            <titre>Neuromancien</titre>
+            <auteurs>
+                <auteur>
+                    <nom>Gibson</nom>
+                    <prenom>William</prenom>
+                </auteur>
+            </auteurs>
+            <genres>
+                <genre>Science Fiction</genre>
+                <genre>Cyberpunk</genre>
+            </genres>
+            <datePubli>
+                <jour>1</jour>
+                <mois>juillet</mois>
+                <annee>1984</annee>
+            </datePubli>
+            <serie serie="The Sprawl" serieFirst="Neuromancien">Tome 1</serie>
+        </livre>
+        <livre>
+            <titre>Good Omen</titre>
+            <auteurs>
+                <auteur>
+                    <nom>Pratchett</nom>
+                    <prenom>Terry</prenom>
+                </auteur>
+                <auteur>
+                    <nom>Gaiman</nom>
+                    <prenom>Neil</prenom>
+                </auteur>
+            </auteurs>
+            <genres>
+                <genre>Fantastique</genre>
+                <genre>Comédie</genre>
+                <genre>Horreur</genre>
+            </genres>
+            <datePubli>
+                <jour>10</jour>
+                <mois>mai</mois>
+                <annee>1990</annee>
+            </datePubli>
+        </livre>
+        <livre>
+            <titre>Futu.re</titre>
+            <auteurs>
+
+                <auteur>
+                    <nom>Glukhovsky</nom>
+                    <prenom>Dmitri</prenom>
+                </auteur>
+            </auteurs>
+            <genres>
+                <genre>Science Fiction</genre>
+                <genre>Dystopie</genre>
+            </genres>
+            <datePubli>
+                <jour>1</jour>
+                <mois>septembre</mois>
+                <annee>2013</annee>
+            </datePubli>
+        </livre>
+        <livre>
+            <titre>Comte Zero</titre>
+            <auteurs>
+
+                <auteur>
+                    <nom>Gibson</nom>
+                    <prenom>William</prenom>
+                </auteur>
+            </auteurs>
+            <genres>
+                <genre>Science Fiction</genre>
+                <genre>Cyberpunk</genre>
+            </genres>
+            <datePubli>
+                <jour></jour>
+                <mois></mois>
+                <annee>1986</annee>
+            </datePubli>
+            <serie serie="The Sprawl" serieFirst="Neuromancien">Tome 2</serie>
+        </livre>
+
+    </listeLivres>
+
+</Exo1>

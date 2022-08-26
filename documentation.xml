@@ -1,0 +1,50 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<demo>
+
+
+    <!-- Exemple de XML pour du formatage de doc -->
+
+    <documentation>
+        <titre> XML en tant que doc : </titre>
+        <paragraphe>
+            Le XML est pratique pour encoder des
+            <important>informations formatées</important>
+            !
+            <citationDeSamuel>Ce langage est très permissif!</citationDeSamuel>
+        </paragraphe>
+    </documentation>
+
+    <!-- XML pour de la transmission de données-->
+
+    <communication>
+        <transmission>
+            <de>
+                <contact>
+                    <nomExp>Legrain</nomExp>
+                    <prenomExp>Samuel</prenomExp>
+                    <email>samuel.legrain@bstorm.be</email>
+                </contact>
+            </de>
+            <a>
+                <contact>
+                    <nomExp>Legrain</nomExp>
+                    <prenomExp>Samuel</prenomExp>
+                    <email>samuel.legrain@bstorm.be</email>
+                </contact>
+                <contact>
+                    <nomExp>Legrain</nomExp>
+                    <prenomExp>Samuel</prenomExp>
+                    <email>samuel.legrain@bstorm.be</email>
+                </contact>
+                <contact>
+                    <nomExp>Legrain</nomExp>
+                    <prenomExp>Samuel</prenomExp>
+                    <email>samuel.legrain@bstorm.be</email>
+                </contact>
+            </a>
+        </transmission>
+        <sujet>Cours de XML</sujet>
+        <message> Ce cours est génial!</message>
+    </communication>
+</demo>
