@@ -1,0 +1,18 @@
+<!ELEMENT Exo1 (listeLivres)>
+<!ELEMENT listeLivres (livre*)>
+<!ELEMENT livre (titre,auteurs+,genres+,datePubli,serie?)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT auteurs (auteur*)>
+<!ELEMENT auteur (nom, prenom*)>
+<!ELEMENT  nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT genres (genre+)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT datePubli (jour?, mois?, annee)>
+<!ELEMENT jour (#PCDATA)>
+<!ELEMENT mois (#PCDATA)>
+<!ELEMENT annee (#PCDATA)>
+<!ELEMENT serie (#PCDATA)>
+
+<!ATTLIST serie serie CDATA #IMPLIED>
+<!ATTLIST serie serieFirst CDATA #IMPLIED>

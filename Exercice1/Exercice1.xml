@@ -1,8 +1,9 @@
-<?xml version="1.1" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Exo1 SYSTEM "exercice1.dtd">
 
 <Exo1>
 
-    <!-- ● Réalisez un document XML représentant une liste de livres.
+<!-- ● Réalisez un document XML représentant une liste de livres.
 ● Chaque livre a un titre, un auteur (juste le nom/prénom), un genre et une date
 de publication.
 ● Extra : Si le livre est le 2ième d’une série, on doit pouvoir retrouver le premier.  -->

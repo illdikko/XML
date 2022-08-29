@@ -1,4 +1,7 @@
-<?xml version="1.1" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE annuaire SYSTEM "Exercice2.dtd">
+
+
 
 <annuaire>
     <personne>
@@ -7,7 +10,7 @@
         <adresse>
             <rue>Rue d'Orianne</rue>
             <numero>1</numero>
-            <boîte>32</boîte>
+            <boite>32</boite>
             <codePostal>1000</codePostal>
             <ville>Bruxelles</ville>
             <pays>Belgique</pays>
@@ -20,7 +23,7 @@
         </telephones>
         <emails>
             <email>
-                <typeMail>Perso</typeMail>
+                <typeEmail>Perso</typeEmail>
                 <adresseEmail>mayaorianne@gmail.com</adresseEmail>
             </email>
         </emails>
@@ -31,7 +34,7 @@
         <adresse>
             <rue>Rue de Pologne</rue>
             <numero>32</numero>
-            <boîte>2</boîte>
+            <boite>2</boite>
             <codePostal>1020</codePostal>
             <ville>Ixelles</ville>
             <pays>Belgique</pays>
@@ -44,7 +47,7 @@
         </telephones>
         <emails>
             <email>
-                <typeMail>Perso</typeMail>
+                <typeEmail>Perso</typeEmail>
                 <adresseEmail>mayaorianne@gmail.com</adresseEmail>
             </email>
         </emails>

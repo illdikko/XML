@@ -1,0 +1,19 @@
+<!ELEMENT annuaire (personne*)>
+<!ELEMENT personne (nom,prenom,adresse,telephones,emails)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT adresse (rue,numero?,boite?,codePostal,ville,pays)>
+<!ELEMENT rue (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT boite (#PCDATA)>
+<!ELEMENT codePostal (#PCDATA)>
+<!ELEMENT ville (#PCDATA)>
+<!ELEMENT pays (#PCDATA)>
+<!ELEMENT telephones (telephone*)>
+<!ELEMENT telephone (typeNumero,numero)>
+<!ELEMENT typeNumero (#PCDATA)>
+<!ELEMENT emails (email)>
+<!ELEMENT email (typeEmail,adresseEmail)>
+<!ELEMENT typeEmail (#PCDATA)>
+<!ELEMENT adresseEmail (#PCDATA)>
+
