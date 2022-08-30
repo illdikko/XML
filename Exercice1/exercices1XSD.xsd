@@ -1,0 +1,56 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<xsd1:schema xmlns:xsd1="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Déclaration TYPES SIMPLES -->
+    <xsd1:simpleType name="jour">
+        <xsd1:restriction base="xsd1:positiveInteger">
+            <xsd1:maxInclusive value="31" />
+        </xsd1:restriction>
+    </xsd1:simpleType>
+    <xsd1:simpleType name="annee">
+        <xsd1:restriction base="xsd1:positiveInteger">
+        </xsd1:restriction>
+    </xsd1:simpleType>
+
+    <!-- Déclaration d'ELEMENTS de type SIMPLE -->
+
+    <xsd1:element name="titre" type="xsd1:string" />
+    <xsd1:element name="nom" type="xsd1:string" />
+    <xsd1:element name="prenom" type="xsd1:string" />
+    <xsd1:element name="genre" type="xsd1:string" />
+    <xsd1:element name="jour" type="jour" />
+    <xsd1:element name="mois" type="xsd1:string" />
+    <xsd1:element name="annee" type="annee" />
+        
+        <!-- Déclaration de TYPES COMPLEXES -->
+    <xsd1:complexType name="type_listeLivre">
+        <xsd1:sequence>
+            <xsd1:element ref="livre"/>
+        </xsd1:sequence>
+    </xsd1:complexType>
+    <xsd1:complexType name="type_livre">
+        <xsd1:sequence>
+            <xsd1:element ref="titre"/>
+            <xsd1:element ref="auteurs"/>
+            <xsd1:element ref="genres"/>
+            <xsd1:element ref="datePubli"/>
+        </xsd1:sequence>
+    </xsd1:complexType>
+
+        
+    
+    <!-- Déclaration d'ELEMENTS de type COMPLEXES -->
+    <xsd1:element name="livre" type="type_livre">
+
+    </xsd1:element>
+    <xsd1:element name="datePubli">
+        <xsd1:complexType>
+            <xsd1:sequence>
+                <xsd1:element ref="jour"/>
+                <xsd1:element ref="mois" />
+                <xsd1:element ref="annee" />
+            </xsd1:sequence>
+        </xsd1:complexType>
+    </xsd1:element>
+    
+</xsd1:schema>

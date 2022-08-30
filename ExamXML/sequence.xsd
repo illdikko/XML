@@ -1,0 +1,49 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- Elements -->
+
+    <xsd:element name="adresse" type="adresse"/>
+    <xsd:element name="rue" type="xsd:string" />
+    <xsd:element name="numero" type="xsd:string" />
+    <xsd:element name="boite" type="xsd:string" />
+    <xsd:element name="codePostal" type="T_codePostal" />
+    <xsd:element name="ville" type="xsd:string" />
+
+<!-- simple types -->
+
+    <xsd:simpleType name="T_rue">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="255" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="T_numero">
+        <xsd:restriction base="xsd:positiveInteger" />
+    </xsd:simpleType>
+
+    <xsd:simpleType name="T_codePostal">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="4" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="T_ville">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="255" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+<!-- complex types -->
+
+    <xsd:complexType name="adresse">
+        <xsd:sequence>
+            <xsd:element ref="rue" />
+            <xsd:element ref="numero" minOccurs="0" />
+            <xsd:element ref="boite" minOccurs="0" />
+            <xsd:element ref="codePostal" />
+            <xsd:element ref="ville" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

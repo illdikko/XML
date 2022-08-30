@@ -1,0 +1,38 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+
+<classe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="imbrications.xsd">
+
+    <professeur>
+        <titre>Mlle</titre>
+        <nom>Decot</nom>
+        <prenom>Guylaine</prenom>
+        <debutCarriere>2018</debutCarriere>
+        <numTel>0234567891</numTel>
+        <email>guydec@yahoo.fr</email>
+        <adresse>
+            <rue>Rue des fleurs</rue>
+            <numero>10</numero>
+            <boite></boite>
+            <codePostal>5800</codePostal>
+            <ville>Nevers</ville>
+        </adresse>
+        <cours>
+            <cour>
+                <intitule>Enseignement General</intitule>
+                <credit>5</credit>
+            </cour>
+        </cours>
+    </professeur>
+    <eleves>
+        <eleve>
+            <nom>Ducourtieux</nom>
+            <prenom>Coline</prenom>
+            <dateNaissance>
+                <jour>21</jour>
+                <mois>03</mois>
+                <annee>1990</annee>
+            </dateNaissance>
+            <email>c.ducourtieux@interface3.be</email>
+        </eleve>
+    </eleves>
+</classe>

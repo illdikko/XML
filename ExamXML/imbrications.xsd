@@ -1,0 +1,140 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:include schemaLocation="./sequence.xsd" />            
+
+    <!-- Elements -->
+    <xsd:element name="classe" type="T_classe" />
+    <xsd:element name="professeur" type="T_prof" />
+    <xsd:element name="titre" type="T_titre" />
+    <xsd:element name="nom" type="T_nom" />
+    <xsd:element name="prenom" type="T_nom" />
+    <xsd:element name="debutCarriere" type="T_annee" />
+    <xsd:element name="numTel" type="T_tel" />
+    <xsd:element name="email" type="T_email" />
+    <xsd:element name="cours" type="T_cours" />
+    <xsd:element name="cour" type="T_cour" />
+    <xsd:element name="intitule" type="T_nom" />
+    <xsd:element name="credit" type="T_credit" />
+    <xsd:element name="eleves" type="T_eleves" />
+    <xsd:element name="eleve" type="T_eleve" />
+    <xsd:element name="dateNaissance" type="T_date" />
+    <xsd:element name="jour" type="T_jour" />
+    <xsd:element name="mois" type="T_mois" />
+    <xsd:element name="annee" type="T_annee" />
+
+    
+    <!-- simple types -->
+    
+    <xsd:simpleType name="T_titre">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Mr" />
+            <xsd:enumeration value="Mme" />
+            <xsd:enumeration value="Mlle" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="T_nom">
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="2" />
+            <xsd:maxLength value="50" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="T_tel">
+        <xsd:restriction base="xsd:string" />
+    </xsd:simpleType>
+
+    <xsd:simpleType name="T_email">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[_\-a-zA-Z0-9\.\+]+@[a-zA-Z0-9](\.?[\-a-zA-Z0-9]*[a-zA-Z0-9])*" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="T_credit">
+        <xsd:restriction base="xsd:positiveInteger">
+            <xsd:minInclusive value="1" />
+            <xsd:maxInclusive value="9" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="T_jour">
+        <xsd:restriction base="xsd:positiveInteger">
+            <xsd:minInclusive value="1" />
+            <xsd:maxInclusive value="31" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="T_mois">
+        <xsd:restriction base="xsd:positiveInteger">
+            <xsd:minInclusive value="1" />
+            <xsd:maxInclusive value="12" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="T_annee">
+        <xsd:restriction base="xsd:string">
+            <xsd:length value="4" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    
+    <!-- complex types -->
+    
+    <xsd:complexType name="T_classe">
+        <xsd:all>
+            <xsd:element ref="professeur" />
+            <xsd:element ref="eleves" />
+        </xsd:all>
+    </xsd:complexType>
+    
+    <xsd:complexType name="T_prof">
+        <xsd:sequence>
+            <xsd:element ref="titre" />
+            <xsd:element ref="nom" />
+            <xsd:element ref="prenom" />
+            <xsd:element ref="debutCarriere" />
+            <xsd:element ref="numTel" />
+            <xsd:element ref="email" />
+            <xsd:element ref="adresse"/>
+            <xsd:element ref="cours" />
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    
+    <xsd:complexType name="T_cours">
+        <xsd:sequence>
+        <xsd:element ref="cour" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="T_cour">
+        <xsd:sequence>
+            <xsd:element ref="intitule" />
+            <xsd:element ref="credit" />
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="T_eleves">
+        <xsd:sequence>
+        <xsd:element ref="eleve" maxOccurs="unbounded" />
+    </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="T_eleve">
+        <xsd:sequence>
+            <xsd:element ref="nom" />
+            <xsd:element ref="prenom" />
+            <xsd:element ref="dateNaissance" />
+            <xsd:element ref="email" />
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="T_date">
+        <xsd:sequence>
+            <xsd:element ref="jour" />
+            <xsd:element ref="mois" />
+            <xsd:element ref="annee" />
+        </xsd:sequence>
+    </xsd:complexType>
+    
+</xsd:schema>
